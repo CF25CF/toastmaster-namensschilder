@@ -22,9 +22,9 @@
   .header-logo{height:48px;flex-shrink:0;}
   .header-text h1{color:#fff;font-size:1.25rem;font-weight:700;}
   .header-text p{color:var(--tm-gold);font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;margin-top:0.1rem;}
-  .app-wrapper{display:flex;justify-content:center;padding:1.2rem;gap:1.2rem;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);}
-  .input-panel{width:100%;max-width:520px;flex-shrink:0;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);}
-  .preview-panel{flex:1;max-width:480px;opacity:0;transform:translateX(40px);pointer-events:none;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);display:none;}
+  .app-wrapper{display:flex;justify-content:center;padding:1.2rem;gap:1.2rem;}
+  .input-panel{width:100%;max-width:520px;flex-shrink:0;}
+  .preview-panel{flex:1;max-width:480px;opacity:0;transform:translateX(40px);pointer-events:none;transition:opacity 0.5s,transform 0.5s;display:none;}
   .preview-panel.visible{opacity:1;transform:translateX(0);pointer-events:auto;display:block;}
   .section{background:var(--tm-white);border-radius:10px;padding:1.2rem;margin-bottom:1rem;box-shadow:0 2px 8px var(--tm-shadow);border:1px solid var(--tm-border);}
   .section-title{font-size:0.95rem;font-weight:700;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.45rem;color:var(--tm-blue);}
