@@ -313,6 +313,11 @@ document.querySelectorAll('.radio-group label').forEach(lbl=>{
     const input=document.getElementById(this.getAttribute('for'));
     if(input){input.checked=true;input.dispatchEvent(new Event('change',{bubbles:true}));}
   });
+  lbl.addEventListener('touchend',function(e){
+    e.preventDefault();
+    const input=document.getElementById(this.getAttribute('for'));
+    if(input){input.checked=true;input.dispatchEvent(new Event('change',{bubbles:true}));}
+  });
 });
 document.querySelectorAll('input[name="rolle"]').forEach(r=>{r.addEventListener('change',updateRoleUI);});
 function updateRoleUI(){
