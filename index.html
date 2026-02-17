@@ -16,7 +16,8 @@
     --gast-accent:#1A6E6E; --gast-dark:#0F3D3D; --gast-gold:#76D7C4;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:Helvetica,Arial,sans-serif;background:var(--tm-bg);color:var(--tm-text);min-height:100vh;overscroll-behavior:none;}
+  html,body{overscroll-behavior:none;-webkit-overflow-scrolling:touch;}
+  body{font-family:Helvetica,Arial,sans-serif;background:var(--tm-bg);color:var(--tm-text);min-height:100vh;position:fixed;width:100%;overflow-y:auto;}
   .header{background:linear-gradient(135deg,var(--tm-blue) 0%,var(--tm-blue-light) 100%);padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;position:relative;}
   .header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--tm-gold),#E8D59E,var(--tm-gold));}
   .header-logo{height:48px;flex-shrink:0;}
@@ -310,11 +311,6 @@ document.querySelectorAll('input[name="stadt"]').forEach(r=>{
 // Robust mobile radio handling - also listen on labels
 document.querySelectorAll('.radio-group label').forEach(lbl=>{
   lbl.addEventListener('click',function(e){
-    const input=document.getElementById(this.getAttribute('for'));
-    if(input){input.checked=true;input.dispatchEvent(new Event('change',{bubbles:true}));}
-  });
-  lbl.addEventListener('touchend',function(e){
-    e.preventDefault();
     const input=document.getElementById(this.getAttribute('for'));
     if(input){input.checked=true;input.dispatchEvent(new Event('change',{bubbles:true}));}
   });
